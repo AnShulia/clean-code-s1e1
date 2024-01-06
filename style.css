@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -10,7 +10,7 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header__img {
   width: 100%;
 }
 .header .more-inf {
@@ -34,17 +34,18 @@ body {
 .task-container {
   display: flex;
 }
-ul {
+.tasks-list{ border: 1px red solid;
   margin:0;
   padding: 0px;
 }
-li, h3 {
+h3,
+.tasks-list__item {
   list-style:none;
 }
-input,button{
+input{
   outline:none;
 }
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -52,8 +53,9 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline:none;
 }
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -88,12 +90,12 @@ label[for="enter-new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#enter-new-task {
+#enter-new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.tasks-list__item { border: 1px red solid;
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -102,20 +104,20 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.tasks-list__item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.tasks-list__item > input[type="checkbox"] {
   margin: 0 10px;
 }
-li > label {
+.tasks-list__item > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+.tasks-list__item >    input[type="text"] {
   width: 226px
 }
 button.delete img {
@@ -128,21 +130,21 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul .tasks-list__item input[type=text] {
   display:none
 }
 
-ul li.edit-mode input[type=text] {
+ul .tasks-list__item.edit-mode input[type=text] {
   display:inline-block;
   width:224px
 }
 
-ul li.edit-mode label {
+ul .tasks-list__item.edit-mode label {
   display:none;
 }
